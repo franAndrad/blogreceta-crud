@@ -1,38 +1,49 @@
 import React, { useState } from 'react';
-import { Form , Button , Card} from 'react-bootstrap';
+import { Form , Button , Card, Alert} from 'react-bootstrap';
+import { cantidadCaracteres, validarURL } from './helpers';
+import { useAsyncError, useNavigate } from 'react-router-dom';
 
 const CrearReceta = () => {
 
     const [titulo,setTitulo] = useState('');
     const [descripcion,setDescripcion] = useState('');
     const [imagen,setImagen] = useState('');
-    const [ingredientes,setIngredientes] = ('');
+    const [ingredientes,setIngredientes] = useState ('');
+    const [msjError,setMsjError] = useState (false);
 
     const URL = "http://localhost:3005/recetas";
+    const navegacion = useNavigate();
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
         //validaciones
-        const nuevaReceta = {
-            titulo,
-            ingredientes,
-            descripcion,
-            imagen
-        }
-        try {
-            const parametrosPeticion = {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(nuevaReceta)
+        if(cantidadCaracteres(titulo,2,50)&&validarURL(imagen)&&cantidadCaracteres(descripcion,5,500)&&cantidadCaracteres(ingredientes,5,500)){
+            setMsjError(false);
+            const nuevaReceta = {
+                titulo,
+                ingredientes,
+                descripcion,
+                imagen
             }
-            const respuesta = await fetch(URL,parametrosPeticion)
-            if(respuesta.status === 201){
-                console.log("el producto se creo correctamente");
+            try {
+                const parametrosPeticion = {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(nuevaReceta)
+                }
+                const respuesta = await fetch(URL,parametrosPeticion)
+                if(respuesta.status === 201){
+                    console.log("el producto se creo correctamente");
+                    navegacion('/administrar');
+                }
+
+            } catch (error) {
+                console.log(error);
             }
-        } catch (error) {
-            console.log(error);
+        }else{
+            setMsjError(true);
         }
     }
     return (
@@ -45,15 +56,17 @@ const CrearReceta = () => {
                     <Form.Label>Nombre *</Form.Label>
                     <Form.Control 
                     type="text" 
-                    placeholder="Ej: Chocotorta" />
+                    placeholder="Ej: Chocotorta" 
                     onChange ={(e)=>setTitulo(e.target.value)}
+                    />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formTitulo">
                     <Form.Label>URL Imagen</Form.Label>
                     <Form.Control 
                     type="text" 
-                    placeholder="Ej: https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"/>
+                    placeholder="Ej: https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
                     onChange = {(e)=>setImagen(e.target.value)}
+                    />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formTitulo">
                     <Form.Label>Descripcion *</Form.Label>
@@ -66,13 +79,17 @@ const CrearReceta = () => {
                     <Form.Label>Ingredientes *</Form.Label>
                     <Form.Control 
                     type="text" 
-                    placeholder="ingrediente 1, ingrediente 2, ingrediente 3, etc" />
+                    placeholder="ingrediente 1, ingrediente 2, ingrediente 3, etc"
                     onChange={(e)=>setIngredientes(e.target.value)}
+                    />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Guardar
                 </Button>
             </Form>
+            {
+                (msjError) ? (<Alert variant='danger' className=' mx-3'>La receta no pudo ser creada, verifique los datos ingresados!</Alert>) : null
+            }
         </Card>
     );
 };

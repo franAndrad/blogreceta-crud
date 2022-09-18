@@ -26,7 +26,7 @@ const AdministrarReceta = () => {
                     <Link to={`/administrar/crear`} className="btn btn-primary mb-2">Agregar</Link>
                 </div>
                 <Table striped bordered hover responsive>
-                    <thead>
+                    <thead className='bg-secondary text-light'>
                         <tr>
                             <th>#</th>
                             <th>Titulo</th>

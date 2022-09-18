@@ -18,7 +18,7 @@ const ItemReceta = (props) => {
         }
     }
     return (
-        <tr>
+        <tr className='bg-transparent'>
             <td>{props.receta.id}</td>
             <td>{props.receta.titulo}</td>
             <td>{props.receta.imagen}</td>

@@ -1,0 +1,34 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "titulo": "chocotorta",
+      "ingredientes":{ 
+        "primer": "2 Queso crema 250g",
+        "segundo": "3 paquetes chocolina"
+      },
+      "descripcion": " Esta receta te va a encantar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+    },
+    {
+      "id": 2,
+      "titulo": "chocotorta",
+      "ingredientes":{ 
+        "primer": "2 Queso crema 250g",
+        "segundo": "3 paquetes chocolina"
+      },
+      "descripcion":" Esta receta te va a encantar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+    },
+    {
+      "id": 3,
+      "titulo": "chocotorta",
+      "ingredientes":{ 
+        "primer": "2 Queso crema 250g",
+        "segundo": "3 paquetes chocolina"
+      },
+      "descripcion": " Esta receta te va a encantar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+    }
+  ]
+}

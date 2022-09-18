@@ -23,7 +23,7 @@ const Detalle = () => {
             <Card.Header className='text-center'>{receta.titulo}</Card.Header>
             <img src={receta.imagen} alt={receta.titulo} />
             <Card.Body>
-                <Card.Title>{receta.titulo}</Card.Title>
+                <h5>Descripcion:</h5>
                 <Card.Text>{receta.descripcion}</Card.Text>  
                 <hr />
                 <MostrarIngredientes ingredientes={receta.ingredientes}></MostrarIngredientes>

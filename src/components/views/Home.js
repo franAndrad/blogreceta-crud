@@ -21,10 +21,10 @@ const Home = () => {
     }
 
     return (
-        <div>
-          <h1 className='display-5 mt-5 text-center'>Encuentra tus recetas favoritas</h1>
+        <div className='container'>
+          <h1 className='display-4 mt-5 text-center'>Encuentra tus recetas favoritas</h1>
           <hr />  
-          <div className='row mx-2'>
+            <div className='row mb-5'>
             {
             listaRecetas.map((receta) =>
             <CardReceta key={receta.id} receta={receta}></CardReceta>

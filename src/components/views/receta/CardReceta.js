@@ -7,14 +7,16 @@ const CardReceta = (props) => {
     const URL = "http://localhost:3005/recetas";
 
     return (
-        <div className='col-6 col-md-3 col-lg-2 card-group mt-4'>
-            <Card>
-                <Card.Img variant="top" src={props.receta.imagen}/>
+        <div className='col-6 col-md-3 col-lg-2 mt-4'>
+            <Card className='h-100'>
+                <Card.Img variant="top" className='rounded' src={props.receta.imagen}/>
                 <Card.Body>
                     <Card.Title>{props.receta.titulo}</Card.Title>
                     <Card.Text>{props.receta.descripcion}</Card.Text>
-                    <Link to={'/detalle/'+props.receta.id} className="btn btn-primary" >Ver mas</Link>
                 </Card.Body>
+                <div className='mx-3'>
+                <Link to={'/detalle/'+props.receta.id} className="btn btn-primary mb-3" >Ver mas</Link>
+                </div>
             </Card>
         </div>
     );

@@ -62,7 +62,7 @@ const EditarReceta = () => {
         }
     }
     return (
-        <Card className='w-75 ms-auto me-auto my-5 bg-light border rounded'>
+        <Card className='container ms-auto me-auto my-5 bg-light border rounded px-0'>
             <Card.Header className='bg-dark'>
                 <h1 className='fs-4 fw-light text-center text-light'>Agrega una receta</h1>
             </Card.Header>

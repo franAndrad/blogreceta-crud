@@ -2,24 +2,31 @@
   "recetas": [
     {
       "titulo": "chocotorta",
-      "descripcion": " Esta receta te va a encantar",
+      "descripcion": "aqui vamos a poner la descripcion de lo que vamos a relizar",
       "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612",
-      "ingredientes": "uno,dos,tres",
+      "ingredientes": "ingrediente 1,ingrediente 2,ingrediente 3,ingrediente 4",
       "id": 1
     },
     {
-      "id": 2,
       "titulo": "chocotorta",
-      "ingredientes": "uno,dos,tres",
-      "descripcion": " Esta receta te va a encantar",
-      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+      "descripcion": "aqui vamos a poner la descripcion de lo que vamos a relizar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612",
+      "ingredientes": "ingrediente 1,ingrediente 2,ingrediente 3,ingrediente 4",
+      "id": 2
     },
     {
-      "id": 3,
       "titulo": "chocotorta",
-      "ingredientes": "uno,dos,tres",
-      "descripcion": " Esta receta te va a encantar",
-      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+      "descripcion": "aqui vamos a poner la descripcion de lo que vamos a relizar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612",
+      "ingredientes": "ingrediente 1,ingrediente 2,ingrediente 3,ingrediente 4",
+      "id": 3
+    },
+    {
+      "titulo": "pan casero",
+      "descripcion": "aqui vamos a poner la descripcion de lo que vamos a relizar",
+      "imagen": "",
+      "ingredientes": "ingrediente 1,ingrediente 2,ingrediente 3,ingrediente 4",
+      "id": 4
     }
   ]
 }

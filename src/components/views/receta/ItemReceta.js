@@ -23,7 +23,7 @@ const ItemReceta = (props) => {
             <td>{props.receta.titulo}</td>
             <td>{props.receta.imagen}</td>
             <td>{props.receta.descripcion}</td>
-            <td>{props.receta.ingredientes}</td>
+            <td>{props.receta.ingredientes.toString()}</td>
             <td>
                 <Link to={`/administrar/editar/${props.receta.id}`} className='btn btn-warning'>Editar</Link>
                 <Button variant='danger' onClick={handleDelete}>Borrar</Button>

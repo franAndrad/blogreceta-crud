@@ -3,21 +3,28 @@
     {
       "id": 1,
       "titulo": "chocotorta",
-      "ingredientes":"uno,dos,tres",
+      "ingredientes": "uno,dos,tres",
       "descripcion": " Esta receta te va a encantar",
       "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
     },
     {
       "id": 2,
       "titulo": "chocotorta",
-      "ingredientes":"uno,dos,tres",
-      "descripcion":" Esta receta te va a encantar",
+      "ingredientes": "uno,dos,tres",
+      "descripcion": " Esta receta te va a encantar",
       "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
     },
     {
       "id": 3,
       "titulo": "chocotorta",
-      "ingredientes":"uno,dos,tres",
+      "ingredientes": "uno,dos,tres",
+      "descripcion": " Esta receta te va a encantar",
+      "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
+    },
+    {
+      "id": 4,
+      "titulo": "chocotorta",
+      "ingredientes": "uno,dos,tres",
       "descripcion": " Esta receta te va a encantar",
       "imagen": "https://media.istockphoto.com/photos/homemade-chocotorta-picture-id1327623325?s=612x612"
     }

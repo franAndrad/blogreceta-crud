@@ -7,7 +7,7 @@ const CardReceta = (props) => {
     const URL = "http://localhost:3005/recetas";
 
     return (
-        <div className='col-4 card-group mt-4'>
+        <div className='col-6 col-md-3 col-lg-2 card-group mt-4'>
             <Card>
                 <Card.Img variant="top" src={props.receta.imagen}/>
                 <Card.Body>

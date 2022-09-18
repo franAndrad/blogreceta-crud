@@ -12,7 +12,7 @@ const ItemReceta = (props) => {
             if(respuesta.status === 200){
                 console.log('Producto Eliminado')
             }
-
+            props.consultarAPI();
         } catch (error) {
             console.log(error);
         }

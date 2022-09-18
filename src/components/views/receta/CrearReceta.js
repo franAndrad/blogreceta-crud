@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Form , Button , Card, Alert} from 'react-bootstrap';
 import { cantidadCaracteres, validarURL } from './helpers';
-import { useAsyncError, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CrearReceta = () => {
 
     const [titulo,setTitulo] = useState('');
     const [descripcion,setDescripcion] = useState('');
     const [imagen,setImagen] = useState('');
-    const [ingredientes,setIngredientes] = useState ('');
+    const [ingredientes,setIngredientes] = useState ([]);
     const [msjError,setMsjError] = useState (false);
 
     const URL = "http://localhost:3005/recetas";
@@ -17,7 +17,7 @@ const CrearReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         //validaciones
-        if(cantidadCaracteres(titulo,2,50)&&validarURL(imagen)&&cantidadCaracteres(descripcion,5,500)&&cantidadCaracteres(ingredientes,5,500)){
+        if(cantidadCaracteres(titulo,2,50)&&validarURL(imagen)&&cantidadCaracteres(descripcion,5,500)){
             setMsjError(false);
             const nuevaReceta = {
                 titulo,
@@ -80,7 +80,7 @@ const CrearReceta = () => {
                     <Form.Control 
                     type="text" 
                     placeholder="ingrediente 1, ingrediente 2, ingrediente 3, etc"
-                    onChange={(e)=>setIngredientes(e.target.value)}
+                    onChange={(e)=>setIngredientes((e.target.value).split(','))}
                     />
                 </Form.Group>
                 <Button variant="primary" type="submit">

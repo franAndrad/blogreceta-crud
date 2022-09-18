@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import MostrarIngredientes from './receta/MostrarIngredientes';
 
 const Detalle = () => {
+    const {id} = useParams();
     const URL = "http://localhost:3005/recetas";
     const [receta,setReceta] = useState({});
-    const {id} = useParams();
 
     useEffect(()=>{
         consultarAPI();
@@ -23,8 +24,9 @@ const Detalle = () => {
             <img src={receta.imagen} alt={receta.titulo} />
             <Card.Body>
                 <Card.Title>{receta.titulo}</Card.Title>
-                <Card.Text>{receta.descripcion}</Card.Text>    
-                <Card.Text>{receta.ingredientes}</Card.Text>
+                <Card.Text>{receta.descripcion}</Card.Text>  
+                <hr />
+                <MostrarIngredientes ingredientes={receta.ingredientes}></MostrarIngredientes>
             </Card.Body>
         </Card>
     );

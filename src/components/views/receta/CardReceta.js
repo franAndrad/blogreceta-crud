@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const CardReceta = (props) => {
 

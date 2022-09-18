@@ -11,7 +11,7 @@ const EditarReceta = () => {
     const tituloRef = useRef('');
     const descripcionRef = useRef('');
     const imagenRef = useRef('');
-    const ingredientesRef = useRef('');
+    const ingredientesRef = useRef([]);
     
     const [msjError,setMsjError] = useState(false);
     const URL = "http://localhost:3005/recetas";
@@ -34,13 +34,13 @@ const EditarReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
-        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && cantidadCaracteres(ingredientesRef.current.value, 5, 500)) {
+        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500)) {
             setMsjError(false);
             const recetaEditar = {
                 titulo: tituloRef.current.value,
                 descripcion: descripcionRef.current.value,
                 imagen: imagenRef.current.value,
-                ingredientes: ingredientesRef.current.value
+                ingredientes: ingredientesRef.current.value.split(',')
             }
             try {
                 const parametrosPeticion = {

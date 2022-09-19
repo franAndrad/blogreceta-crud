@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 
 const CardReceta = (props) => {
 
-    const URL = "http://localhost:3005/recetas";
+    const URL = process.env.REACT_APP_API_RECETAS;
 
     return (
         <div className='col-6 col-md-4 col-lg-3 mt-4'>

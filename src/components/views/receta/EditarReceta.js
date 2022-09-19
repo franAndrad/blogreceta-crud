@@ -14,7 +14,7 @@ const EditarReceta = () => {
     const ingredientesRef = useRef([]);
     
     const [msjError,setMsjError] = useState(false);
-    const URL = "http://localhost:3005/recetas";
+    const URL = process.env.REACT_APP_API_RECETAS;
     const navegacion = useNavigate();
 
     useEffect(()=>{

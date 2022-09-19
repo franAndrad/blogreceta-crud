@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const ItemReceta = (props) => {
-    const URL = "http://localhost:3005/recetas";
+    const URL = process.env.REACT_APP_API_RECETAS;
     const handleDelete = async () =>{
         try {
             const parametrosPeticion = {

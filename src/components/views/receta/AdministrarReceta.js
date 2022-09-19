@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const AdministrarReceta = () => {
 
     const [listaRecetas,setListaRecetas] = useState([]);
-    const URL = "http://localhost:3005/recetas";
+    const URL = process.env.REACT_APP_API_RECETAS;
 
     useEffect(()=>{
         consultarAPI();

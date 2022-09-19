@@ -5,7 +5,7 @@ import MostrarIngredientes from './receta/MostrarIngredientes';
 
 const Detalle = () => {
     const {id} = useParams();
-    const URL = "http://localhost:3005/recetas";
+    const URL = process.env.REACT_APP_API_RECETAS;
     const [receta,setReceta] = useState({});
 
     useEffect(()=>{

@@ -4,8 +4,7 @@ import CardReceta from './receta/CardReceta';
 const Home = () => {
 
     const [listaRecetas, setListaRecetas] = useState([]);
-    const URL = "http://localhost:3005/recetas";
-
+    const URL = process.env.REACT_APP_API_RECETAS;
     useEffect(()=>{
         consultarAPI();
     },[]);

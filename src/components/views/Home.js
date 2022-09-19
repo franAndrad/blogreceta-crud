@@ -5,6 +5,7 @@ const Home = () => {
 
     const [listaRecetas, setListaRecetas] = useState([]);
     const URL = process.env.REACT_APP_API_RECETAS;
+    
     useEffect(()=>{
         consultarAPI();
     },[]);

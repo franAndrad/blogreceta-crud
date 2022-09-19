@@ -1,7 +1,7 @@
 import React, {useEffect,useState,useRef} from 'react';
 import { Card, Button, Form , Alert} from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import { cantidadCaracteres, validarURL } from './helpers';
+import { cantidadCaracteres, validarURL , validarIngredientes} from './helpers';
 
 const EditarReceta = () => {
     // traer parametro
@@ -34,7 +34,7 @@ const EditarReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
-        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500)) {
+        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && validarIngredientes(ingredientesRef,2,50)) {
             setMsjError(false);
             const recetaEditar = {
                 titulo: tituloRef.current.value,

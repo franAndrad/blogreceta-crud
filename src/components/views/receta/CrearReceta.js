@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form , Button , Card, Alert} from 'react-bootstrap';
-import { cantidadCaracteres, validarURL } from './helpers';
+import { cantidadCaracteres, validarIngredientes, validarURL } from './helpers';
 import { useNavigate } from 'react-router-dom';
 
 const CrearReceta = () => {
@@ -17,7 +17,7 @@ const CrearReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         //validaciones
-        if(cantidadCaracteres(titulo,2,50)&&validarURL(imagen)&&cantidadCaracteres(descripcion,5,500)){
+        if (cantidadCaracteres(titulo, 2, 50) && validarURL(imagen) && cantidadCaracteres(descripcion, 5, 500) && validarIngredientes(ingredientes, 2, 50)){
             setMsjError(false);
             const nuevaReceta = {
                 titulo,

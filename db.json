@@ -49,6 +49,18 @@
       "descripcion": "ajhsbdjasvdbjabwdkasdf",
       "imagen": "https://t1.rg.ltmcdn.com/es/posts/7/4/7/pan_casero_esponjoso_55747_orig.jpg",
       "id": 4
+    },
+    {
+      "titulo": "chocotorta",
+      "ingredientes": [
+        "ingrediente 1",
+        "ingrediente 2",
+        "ingrediente 3",
+        "ingrediente 4"
+      ],
+      "descripcion": "pan casero",
+      "imagen": "",
+      "id": 5
     }
   ]
 }

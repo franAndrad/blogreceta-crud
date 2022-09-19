@@ -39,7 +39,7 @@ const AdministrarReceta = () => {
                     <tbody>
                     {
                         listaRecetas.map((receta)=>
-                        <ItemReceta key={receta.id} receta={receta} consultarAPI={consultarAPI}></ItemReceta>
+                        <ItemReceta key={receta._id} receta={receta} consultarAPI={consultarAPI}></ItemReceta>
                         )
                     }
                     </tbody>

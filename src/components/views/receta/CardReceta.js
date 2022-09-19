@@ -15,7 +15,7 @@ const CardReceta = (props) => {
                     <Card.Text>{props.receta.descripcion}</Card.Text>
                 </Card.Body>
                 <div className='mx-3'>
-                <Link to={'/detalle/'+props.receta.id} className="btn btn-primary mb-3" >Ver mas</Link>
+                <Link to={'/detalle/'+props.receta._id} className="btn btn-primary mb-3" >Ver mas</Link>
                 </div>
             </Card>
         </div>

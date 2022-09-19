@@ -8,7 +8,7 @@ const ItemReceta = (props) => {
             const parametrosPeticion = {
                 method : 'DELETE'
             }
-            const respuesta = await fetch(URL+'/'+props.receta.id,parametrosPeticion);
+            const respuesta = await fetch(URL+'/'+props.receta._id,parametrosPeticion);
             if(respuesta.status === 200){
                 console.log('Producto Eliminado')
             }
@@ -19,13 +19,13 @@ const ItemReceta = (props) => {
     }
     return (
         <tr className='bg-transparent'>
-            <td>{props.receta.id}</td>
+            <td>{props.receta._id}</td>
             <td>{props.receta.titulo}</td>
             <td>{props.receta.imagen}</td>
             <td>{props.receta.descripcion}</td>
             <td>{props.receta.ingredientes.toString()}</td>
             <td>
-                <Link to={`/administrar/editar/${props.receta.id}`} className='btn btn-warning'>Editar</Link>
+                <Link to={`/administrar/editar/${props.receta._id}`} className='btn btn-warning'>Editar</Link>
                 <Button variant='danger' onClick={handleDelete}>Borrar</Button>
             </td>
         </tr>

@@ -30,7 +30,7 @@ export const validarIngredientes = (input,min,max) =>{
             contador++;
         }
     });
-    if (input.length === verdaderos) {
+    if (input.length === verdaderos && input.lengh>0) {
         return true;
     } else {
         return false;

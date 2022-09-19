@@ -17,7 +17,7 @@ const CrearReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         //validaciones
-        if (cantidadCaracteres(titulo, 2, 50) && validarURL(imagen) && cantidadCaracteres(descripcion, 5, 500) && validarIngredientes(ingredientes, 2, 50)){
+        if (cantidadCaracteres(titulo, 2, 50) && validarURL(imagen) && cantidadCaracteres(descripcion, 5, 500) && validarIngredientes(ingredientes, 2, 60)){
             setMsjError(false);
             const nuevaReceta = {
                 titulo,

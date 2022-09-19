@@ -34,7 +34,7 @@ const EditarReceta = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
-        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && validarIngredientes(ingredientesRef,2,50)) {
+        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && validarIngredientes(ingredientesRef,2,60)) {
             setMsjError(false);
             const recetaEditar = {
                 titulo: tituloRef.current.value,

@@ -21,16 +21,11 @@ export const validarURL = (input) => {
 
 export const validarIngredientes = (input,min,max) =>{
     let verdaderos = 0;
-    let contador = 0;
     input.forEach(element => {
-        while(contador < input.length ){
-            if (element.length>= min && element.length<= max){
-                verdaderos++;
-            }    
-            contador++;
-        }
+            if (element.length>= min && element.length<= max)
+                verdaderos++;  
     });
-    if (input.length === verdaderos && input.lengh>0) {
+    if (input.length === verdaderos && input.length > 0) {
         return true;
     } else {
         return false;

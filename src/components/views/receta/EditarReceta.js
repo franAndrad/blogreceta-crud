@@ -11,7 +11,7 @@ const EditarReceta = () => {
     const tituloRef = useRef('');
     const descripcionRef = useRef('');
     const imagenRef = useRef('');
-    const ingredientesRef = useRef([]);
+    const ingredientesRef = useRef('');
     
     const [msjError,setMsjError] = useState(false);
     const URL = process.env.REACT_APP_API_RECETAS;
@@ -33,14 +33,15 @@ const EditarReceta = () => {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-
-        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && validarIngredientes(ingredientesRef,2,60)) {
+        const ingrediente = ingredientesRef.current.value.split(',')
+        console.log(ingrediente)
+        if (cantidadCaracteres(tituloRef.current.value, 2, 50) && validarURL(imagenRef.current.value) && cantidadCaracteres(descripcionRef.current.value, 5, 500) && validarIngredientes(ingrediente,2,60)) {
             setMsjError(false);
             const recetaEditar = {
                 titulo: tituloRef.current.value,
                 descripcion: descripcionRef.current.value,
                 imagen: imagenRef.current.value,
-                ingredientes: ingredientesRef.current.value.split(',')
+                ingredientes: ingrediente
             }
             try {
                 const parametrosPeticion = {

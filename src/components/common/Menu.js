@@ -1,10 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import "./menu.css"
 
 const Menu = () => {
     return (
-        <Navbar bg="dark" expand="lg" variant='dark' >
+        <Navbar className='bg-color' expand="lg" variant='dark' >
             <Container>
                 <Navbar.Brand as={Link} to='/' href="/">Recetas</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

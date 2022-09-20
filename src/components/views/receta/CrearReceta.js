@@ -48,9 +48,9 @@ const CrearReceta = () => {
     }
     return (
         <Card className='container ms-auto me-auto my-5 bg-light border rounded px-0'>
-            <Card.Header className='bg-dark'>
+            <div className='bg-color border rounded py-2'>
                 <h1 className='fs-4 fw-light text-center text-light'>Agrega una receta</h1>
-            </Card.Header>
+            </div>
             <Form className='m-3' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formTitulo">
                     <Form.Label>Nombre *</Form.Label>
@@ -83,9 +83,9 @@ const CrearReceta = () => {
                     onChange={(e)=>setIngredientes((e.target.value).split(','))}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <button className='btn btn-secondary' type="submit">
                     Guardar
-                </Button>
+                </button>
             </Form>
             {
                 (msjError) ? (<Alert variant='danger' className=' mx-3'>La receta no pudo ser creada, verifique los datos ingresados!</Alert>) : null

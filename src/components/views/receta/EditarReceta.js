@@ -2,6 +2,7 @@ import React, {useEffect,useState,useRef} from 'react';
 import { Card, Button, Form , Alert} from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import { cantidadCaracteres, validarURL , validarIngredientes} from './helpers';
+import './formularioReceta.css'
 
 const EditarReceta = () => {
     // traer parametro
@@ -64,9 +65,9 @@ const EditarReceta = () => {
     }
     return (
         <Card className='container ms-auto me-auto my-5 bg-light border rounded px-0'>
-            <Card.Header className='bg-dark'>
-                <h1 className='fs-4 fw-light text-center text-light'>Agrega una receta</h1>
-            </Card.Header>
+            <div className='bg-color border rounded py-2'>
+                <h1 className='fs-4 fw-light text-center text-light'>Modifica la receta</h1>
+            </div>
             <Form className='m-3' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formTitulo">
                     <Form.Label>Nombre *</Form.Label>
@@ -103,9 +104,9 @@ const EditarReceta = () => {
                         ref={ingredientesRef}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <button className='btn btn-secondary' type="submit">
                     Actualizar
-                </Button>
+                </button>
             </Form>
             {
                 (msjError) ? (<Alert variant='danger' className=' mx-3'>La receta no pudo ser creada, verifique los datos ingresados!</Alert>) : null

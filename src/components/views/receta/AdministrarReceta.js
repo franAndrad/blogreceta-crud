@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Table, Container } from 'react-bootstrap';
 import ItemReceta from './ItemReceta';
 import { Link } from 'react-router-dom';
+import "./administrarReceta.css"
 
 const AdministrarReceta = () => {
 
@@ -19,16 +20,17 @@ const AdministrarReceta = () => {
     }
     return (
         <div>
-            <h1 className='display-5 mt-5 text-center'>Administra tus recetas</h1>
-            <hr />  
             <Container>
+                <h1 className='display-5 mt-5 text-center'>Administra tus recetas</h1>
+                <hr />  
                 <div className='d-flex justify-content-end'>
-                    <Link to={`/administrar/crear`} className="btn btn-primary mb-2">Agregar</Link>
+                    <Link to={`/administrar/crear`} className="btn btn-secondary mb-2">Agregar</Link>
                 </div>
-                <Table striped bordered hover responsive>
-                    <thead className='bg-secondary text-light'>
+
+                <Table bordered hover responsive>
+                    <thead className='bg-color text-light'>
                         <tr>
-                            <th>#</th>
+                            <th># id</th>
                             <th>Titulo</th>
                             <th>Imagen</th>
                             <th>Descripcion</th>
@@ -45,7 +47,6 @@ const AdministrarReceta = () => {
                     </tbody>
                 </Table>
             </Container>
-
         </div>
     );
 };

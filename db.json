@@ -50,5 +50,17 @@
       "imagen": "https://t1.rg.ltmcdn.com/es/posts/7/4/7/pan_casero_esponjoso_55747_orig.jpg",
       "id": 4
     }
+  ],
+  "usersadmin" : [
+    {
+    "nombre": "fran",
+    "email": "fran@gmail.com",
+    "password": "131231"
+    },
+    {
+      "nombre":"nico",
+      "email": "nico@gmail.com",
+      "password": "1122"
+    }
   ]
 }

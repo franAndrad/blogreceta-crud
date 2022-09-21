@@ -31,3 +31,21 @@ export const validarIngredientes = (input,min,max) =>{
         return false;
     }
 }
+
+export const validarContraseña = (input) =>{
+    let expRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
+
+    if(expRegular.test()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+// Minimo 8 caracteres
+// Maximo 15
+// Al menos una letra mayúscula
+// Al menos una letra minucula
+// Al menos un dígito
+// No espacios en blanco
+// Al menos 1 caracter especial

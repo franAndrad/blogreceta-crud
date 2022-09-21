@@ -6,7 +6,6 @@ const InicioSesion = () => {
 
     const [listaAdmin, setListaAdmin] = useState([]);
     const [nombre, setNombre] = useState('');
-    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [msjError, setMsjError] = useState(false);
 
@@ -30,15 +29,14 @@ const InicioSesion = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         setMsjError(false);
-        const encontrado = listaAdmin.find((element)=> element.email === email);
-        if (encontrado != undefined && nombre === encontrado.nombre && email === encontrado.email && password === encontrado.password ){
+        const encontrado = listaAdmin.find((element)=> element.nombre === nombre);
+        if (encontrado != undefined && nombre === encontrado.nombre && password === encontrado.password ){
             navegacion('/administrar');
         }else{
             console.log('usuario invalido')
             setMsjError(true);
         }
     }
-
 
 
     return (
@@ -55,14 +53,6 @@ const InicioSesion = () => {
                         onChange={(e) => setNombre(e.target.value)}
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Ej: francisco@gmail.com"
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                </Form.Group>
                 <Form.Group className="mb-3" controlId="formTitulo">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control
@@ -70,17 +60,11 @@ const InicioSesion = () => {
                         placeholder="Debe tener al menos una letra mayúscula, al menos una letra minucula, no espacios en blanco ,al menos 1 caracter especial y entre 8 a 15 caracteres"
                         onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
-<<<<<<< HEAD
-                <button className='btn btn-secondary my-2' type="submit">
-                    Continuar
-                </button>
-=======
-                <div className='d-flex flex-column align-items-center'>
-                <button className='btn btn-secondary my-2' type="submit">
-                    Continuar
-                </button>
+                <div className='d-flex justify-content-center'>
+                    <button className='btn btn-secondary my-2' type="submit">
+                        Continuar
+                    </button>
                 </div>
->>>>>>> isesion
             </Form>
             {
                 (msjError) ? (<Alert variant='danger' className=' mx-3'>El usuario no se encontro, verifique los datos ingresados!</Alert>) : null

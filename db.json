@@ -53,14 +53,8 @@
   ],
   "usersadmin" : [
     {
-    "nombre": "fran",
-    "email": "fran@gmail.com",
-    "password": "131231"
-    },
-    {
-      "nombre":"nico",
-      "email": "nico@gmail.com",
-      "password": "1122"
+    "nombre": "admin",
+    "password": "admin"
     }
   ]
 }

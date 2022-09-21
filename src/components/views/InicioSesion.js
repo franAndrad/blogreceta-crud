@@ -70,9 +70,17 @@ const InicioSesion = () => {
                         placeholder="Debe tener al menos una letra mayúscula, al menos una letra minucula, no espacios en blanco ,al menos 1 caracter especial y entre 8 a 15 caracteres"
                         onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
+<<<<<<< HEAD
                 <button className='btn btn-secondary my-2' type="submit">
                     Continuar
                 </button>
+=======
+                <div className='d-flex flex-column align-items-center'>
+                <button className='btn btn-secondary my-2' type="submit">
+                    Continuar
+                </button>
+                </div>
+>>>>>>> isesion
             </Form>
             {
                 (msjError) ? (<Alert variant='danger' className=' mx-3'>El usuario no se encontro, verifique los datos ingresados!</Alert>) : null

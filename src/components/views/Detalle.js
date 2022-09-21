@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import MostrarIngredientes from './receta/MostrarIngredientes';
+import './detalle.css'
 
 const Detalle = () => {
     const {id} = useParams();
@@ -19,9 +20,9 @@ const Detalle = () => {
     }
 
     return (
-        <Card className='w-75 me-auto ms-auto m-5'>
+        <Card className='me-auto ms-auto m-5'>
             <Card.Header className='text-center'>{receta.titulo}</Card.Header>
-            <img src={receta.imagen} alt={receta.titulo} />
+            <img src={receta.imagen} alt={receta.titulo} className='imagen'/>
             <Card.Body>
                 <h5>Descripcion:</h5>
                 <Card.Text>{receta.descripcion}</Card.Text>  

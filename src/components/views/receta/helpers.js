@@ -34,8 +34,7 @@ export const validarIngredientes = (input,min,max) =>{
 
 export const validarContraseña = (input) =>{
     let expRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
-
-    if(expRegular.test()){
+    if(expRegular.test(input)){
         return true;
     }
     else{
